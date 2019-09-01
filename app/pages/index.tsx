@@ -1,9 +1,12 @@
 import Page from '../components/layout/Page'
+import Container from '../components/layout/Container'
 
 const Index = () => {
   return (
     <Page title={'Home'}>
-      Hotel management test
+      <Container narrow>
+        Hotel management test
+      </Container>
     </Page>
   )
 }
