@@ -6,8 +6,8 @@ const Menu = () => (
   <div className={'root'}>
     <Container>
       <nav>
-        <Link href={'/calendar'}><a>Calendar</a></Link>
-        <Link href={'/bulk'}><a>Bulk Update</a></Link>
+        <Link href={'/calendar'} prefetch><a>Calendar</a></Link>
+        <Link href={'/bulk'} prefetch><a>Bulk Update</a></Link>
       </nav>
     </Container>
     <style jsx>{`
