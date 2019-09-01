@@ -1,0 +1,58 @@
+{
+  "name": "hotel",
+  "version": 2,
+  "regions": ["sin"],
+  "builds": [
+    { "src": "api/custom-pricing/*.ts", "use": "@now/node" },
+    { "src": "api/availability/*.ts", "use": "@now/node" },
+    { "src": "api/room/*.ts", "use": "@now/node" },
+    { "src": "functions/*.ts", "use": "@now/node" },
+    { "src": "app/static/**/*", "use": "@now/static" },
+    { "src": "app/next.config.js", "use": "@now/next" }
+  ],
+  "routes": [
+    { 
+      "src": "(/.*)/", 
+      "dest": "/functions/trailing-redirect.ts"
+    },
+    {
+      "src": "/api/rooms",
+      "dest": "/api/room/list.ts",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/api/room/(?<id>[^/]+)/bulk",
+      "dest": "/api/room/bulk.ts?id=$id",
+      "methods": ["PUT"]
+    },
+    {
+      "src": "/api/room/(?<id>[^/]+)/price",
+      "dest": "/api/custom-pricing/save.ts?roomId=$id",
+      "methods": ["PUT"]
+    },
+    {
+      "src": "/api/room/(?<id>[^/]+)/availability",
+      "dest": "/api/availability/save.ts?roomId=$id",
+      "methods": ["PUT"]
+    },
+    { 
+      "src": "/static(.*)", 
+      "dest": "/app/static$1" 
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/app/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
+    }
+  ],
+  "env": {
+    "MONGO_URL": "@hotel-mongo-url"
+  },
+  "build": {
+    "env": {
+      "APP_URL": "https://hotel.aladin.now.sh"
+    }
+  }
+}

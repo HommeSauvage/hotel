@@ -1,0 +1,7 @@
+{
+  "name": "@hotel/models",
+  "version": "0.0.1",
+  "dependencies": {
+    "@hotel/mongoose": "^0.0.1"
+  }
+}

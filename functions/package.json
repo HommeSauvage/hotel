@@ -1,0 +1,8 @@
+{
+  "name": "@makina/functions",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@now/node": "^0.12.7"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@hotel/app",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-regular-svg-icons": "^5.10.2",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@hotel/models": "^0.0.1",
+    "@stillthere/fetch": "^1.0.0",
+    "@types/react-datepicker": "^2.8.1",
+    "add": "^2.0.6",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.0.1",
+    "next": "^9.0.5",
+    "qs": "^6.8.0",
+    "react": "^16.9.0",
+    "react-datepicker": "^2.9.3",
+    "react-dom": "^16.9.0",
+    "react-modal": "^3.10.1",
+    "react-select": "^3.0.4",
+    "react-toastify": "^5.3.2"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/lodash": "^4.14.138",
+    "@types/node": "^12.7.3",
+    "@types/qs": "^6.5.3",
+    "@types/react": "^16.9.2",
+    "@types/react-modal": "^3.8.3",
+    "@types/react-select": "^3.0.4",
+    "@types/react-toastify": "^4.0.2",
+    "@types/styled-jsx": "^2.2.8",
+    "@zeit/next-typescript": "^1.1.1",
+    "typescript": "^3.6.2"
+  }
+}
