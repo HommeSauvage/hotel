@@ -153,13 +153,8 @@ const Calendar = ({ rooms, around, onChangeAround, onChangedPrice, onChangedAvai
         .months {
           position: fixed;
           height: 30px;
-          width: calc(100% - 10em);
+          width: 100%;
           border-top: none;
-        }
-        .months div {
-          //display: flex;
-          //justify-content: center;
-          //align-items: center;
         }
         table {
           width: 100%;
@@ -170,7 +165,7 @@ const Calendar = ({ rooms, around, onChangeAround, onChangedPrice, onChangedAvai
         }
         td, th {
           border-top: 1px solid ${colors.separator};
-          min-width: 10em;
+          min-width: 7em;
           
         }
         .tall {
@@ -201,6 +196,16 @@ const Calendar = ({ rooms, around, onChangeAround, onChangedPrice, onChangedAvai
         }
         thead tr {
           height: 30px;
+        }
+
+        @media (min-width: 768px) {
+          .months {
+            width: calc(100% - 10em);
+          }
+          td, th {
+            border-top: 1px solid ${colors.separator};
+            min-width: 10em;
+          }
         }
       `}</style>
     </div>

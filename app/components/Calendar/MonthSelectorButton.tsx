@@ -16,23 +16,17 @@ const MonthSelectorButton = ({ value, onChange }: Props) => {
 
   /* Handlers ----------------------------------------------------------------- */
   const close = () => {
-    console.log('Setting close')
     setIsModalOpen(false)
-    console.log('Closedddddddd!')
   }
 
   const handleConfirm = () => {
-    console.log('Confirm!')
     if(onChange) {
-      console.log('Change!')
       onChange(date)
     }
-    console.log('Closing....!')
     close()
   }
 
   /* Render ----------------------------------------------------------------- */
-  console.log('Is modal open?', isModalOpen)
   return (
     <>
       <TransparentButton style={{ padding: 0 }} onClick={() => setIsModalOpen(true)}>
